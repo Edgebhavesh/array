@@ -1,0 +1,26 @@
+You are given two integer arrays A and B of sizes N and M respectively. You need to modify the elements of A so that B becomes its subarray. 
+Modifying an element means change the element to any other value.
+
+
+            int ans=m;
+
+					  for(int i=0;i<=n-m;i++)
+					  {
+						  int k=0;
+						  int count=0;
+
+						  for(int j=i;j<m+i;j++)
+						  {
+							  if(arr[j]!=brr[k])
+							  {
+								  count++;
+								  k++;
+							  }
+							  else
+							  {
+								  k++;
+							  }
+						  }
+						  ans=Math.min(ans,count);
+					  }
+					  System.out.print(ans);
