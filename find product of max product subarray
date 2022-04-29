@@ -1,0 +1,15 @@
+int maxSubarray(int[] arr,int size)
+{
+  int maxProduct=arr[0];
+  int imax=arr[0];
+  int imin=arr[0];
+  for(int i=0;i<size;i++)
+  {
+    if(arr[i]<0)
+     swap(imax,imin);
+    imax=Math.max(arr[i],imax*arr[i]);
+    imin=Math.min(arr[i],imin*arr[i]);
+   maxProduct=Math.max(maxProduct,imax); 
+  }
+  return maxProduct;
+}
